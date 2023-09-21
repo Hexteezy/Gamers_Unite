@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Tim",
+        "gamertag": "capydays",
+        "email": "olsontd16@gmail.com",
+        "password": "Tim@2023"
+    },
+    {
+        "name": "Taylor",
+        "gamertag": "Tbreeze95",
+        "email": "thabreeze4875@gmail.com",
+        "password": "Taylor@2023"
+    },
+    {
+        "name": "Eli",
+        "gamertag": "blitzbomber",
+        "email": "elias.efly000@gmail.com",
+        "password": "Eli@2023"
+    },
+    {
+        "name": "Raul",
+        "gamertage": "Hexteezy",
+        "email": "undeadhex@gmail.com",
+        "password": "Raul@2023"
+    }
+]
