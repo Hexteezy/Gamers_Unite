@@ -1,7 +1,7 @@
 const steam = require('steam-web');
 
 const steamSess = new steam ({
-    apiKey: '64FC0BC847B1CFB732205AF3CBCBFC75',
+    apiKey: 'process.env.STEAM_APIKEY',
     format: 'json'
 });
 
