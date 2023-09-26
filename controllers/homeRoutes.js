@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
-/*router.get('/', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
@@ -18,7 +18,7 @@ const withAuth = require('../utils/auth');
   } catch (err) {
     res.status(500).json(err);
   }
-});*/
+});
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -26,6 +26,6 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('homepage');
+  res.render('login');
 });
 module.exports = router;
