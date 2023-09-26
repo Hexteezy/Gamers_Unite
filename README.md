@@ -46,9 +46,6 @@ https://github.com/Hexteezy
 Taylor Brown
 https://github.com/Tbreeze95
 
-Elias Ruiz
-https://github.com/blitzbomber87
-
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
 If you followed tutorials, include links to those here as well.
@@ -74,3 +71,6 @@ https://github.com/Hexteezy/Gamers_Unite
 ## Testing
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+
+## Presentation / Deployment
+Slideshow - https://docs.google.com/presentation/d/1DVTAo3q3rqMY5W-HzFK4GHSTimLtDBKTZEpglBxYjos/edit#slide=id.g283abd384a5_1_15
