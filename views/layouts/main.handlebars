@@ -9,12 +9,25 @@
 </head>
 
 <body>
+  <div class="container">
+    <div>
+      <nav>
+        <ul>
+          {{if user}}
+            <li><a href="/views/homepage.handlebars">Home</a></li>
+            <li><a href="/views/login.handlebars">Logout</a></li>
+          {{else}}
+            <li><a href="/views/login.handlebars">login</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+      <h3><img src='../../public/uploads/'</h3>
+    </div>
+  </div>
+
   <header>
     <h1>Welcome to Gamers Unite</h1>
   </header>
-  <nav>
-    <a href="/">Home</a>
-  </nav>
   <main>
     <aside>
     </aside>
