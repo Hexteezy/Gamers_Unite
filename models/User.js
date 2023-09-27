@@ -28,10 +28,6 @@ User.init(
                 len: [3,16],
             },
         },
-        profileImage: {
-            type: DataTypes.BLOB,
-            allowNull: true,
-        },
         email: {
             type: DataTypes.STRING,
             unique: true,
