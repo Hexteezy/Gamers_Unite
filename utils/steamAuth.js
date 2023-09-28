@@ -5,7 +5,7 @@ const steamSess = new steam ({
     format: 'json'
 });
 
-const steamNews = steamSess.getNewsForApp({
+const steamNews = () => {return steamSess.getNewsForApp({
     appid: 440,
     count: 200,
     maxlength: 300,
@@ -15,9 +15,11 @@ const steamNews = steamSess.getNewsForApp({
             let article = data.appnews.newsitems[Math.floor(Math.random() * 200)];
             articles.push(article);
         }
+        console.log(articles);
         return articles;
     }
-});
+    
+})};
 
 module.exports = steamNews;
 
