@@ -9,13 +9,13 @@ const registerFormHandler = async (event) => {
     if (newEmail && newPassword && newUserName && newName) {
         const response = await fetch('/api/users/register', {
             method: 'POST',
-            body: JSON.stringify({ newName, newEmail, newPassword, newUserName }),
+            body: JSON.stringify({ name: newName, email: newEmail, password: newPassword, gamertag: newUserName }),
             headers: { 'Content-Type': 'application/json'},
         });
-        console.log(response);
+        
         if (response.ok) {
-            alert('Register successful!');
             document.location.replace('/');
+    
         } else {
             alert('Failed to log in!')
         }

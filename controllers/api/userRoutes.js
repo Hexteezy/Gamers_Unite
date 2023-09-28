@@ -1,6 +1,19 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+router.get('/', async(req, res) => {
+  try {
+    const users = await User.findAll();
+    if (!users) {
+      res.status(400).json({ message: 'no users'});
+    } else {
+      res.status(200).json(users);
+    }
+  } catch(err) {
+    res.status(400).json(err);
+  }
+})
+
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -48,25 +61,20 @@ router.post('/register', async (req, res) => {
     const userEmail = await User.findOne({ where: {email: req.body.email }});
     const userName = await User.findOne({ where: {gamertag: req.body.gamertag }});
     if (!userEmail && !userName) {
+      console.log('no user email or username');
       const newGamer = await User.create({
         name: req.body.name,
         gamertag: req.body.gamertag,
         email: req.body.email,
         password: req.body.password,
       });
-      
+      console.log(newGamer);
       req.session.save(() => {
         req.session.user_id = newGamer.id;
         req.session.logged_in = true;
-
-        //res.json({ user: newGamer, message: 'Welcome to Gamers Unite! You are now logged in!' },200);
-        // res
-        // .status(200)
-        // .json({ message: 'Good', user: newGamer });
-      // return;
+        
+        res.json({ user: newGamer, message: 'Welcome to Gamers Unite! You are now logged in!' })
       })
-    res.json({ user: newGamer, message: 'Welcome to Gamers Unite! You are now logged in!' },200)
-    return;
 
     } else {
       res
@@ -76,6 +84,7 @@ router.post('/register', async (req, res) => {
     }
   }
   catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
