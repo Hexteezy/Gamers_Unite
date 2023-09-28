@@ -1,9 +1,9 @@
 :root {
     --primary: #600d22;
-    --secondary: #86938f;
-    --tertiary: #000000;
-    --quatrinary: #6c6b67;
-    --light: #e3e4e3;
+    --secondary: #EDEDED;
+    --tertiary: #171717;
+    --quatrinary: #444444;
+    --light: #7f827f;
     --dark: #182c23;
     --error: rgb(228, 46, 1);
     --border-radius: 0.3rem;
@@ -42,7 +42,7 @@
   }
   
   aside {
-    flex: 0;
+    flex-shrink: 0;
     background-color: var(--tertiary);
     padding: 80px;
     text-align: left;
@@ -52,6 +52,7 @@
   nav {
     display: flex;
     background-color: var(--secondary);
+    
   }
   
   nav a {
@@ -66,49 +67,15 @@
     background-color: var(--dark);
   }
   
-  .gallery {
-    flex: 4;
-    background-color: #fff;
-    padding: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 100%;
-    transition: color 0.1s;
-    margin-left: 16px;
-  }
-  
   img {
     max-width: 100%;
     height: auto;
   }
   
-  .painting {
-    width: 50%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-  }
-  
-  .painting-details {
-    text-align: center;
-    padding: 10px 20px;
-    font-weight: bold;
-  }
-  
   /* CARDS */
   .card {
     margin: 20px;
-    flex: 0 1 300px;
+    flex: 0 1 200px;
     border: 7px double var(--dark);
     border-radius: 10px;
     background-color: var(--light);
@@ -124,7 +91,7 @@
     border-radius: var(--border-radius);
     border-style: double;
     border-width: thick;
-    background-color: #577a7c;
+    background-color: #824a09;
     color: var(--light);
   }
   
@@ -144,17 +111,6 @@
     font-weight: bold;
   }
   
-  .gallery-name {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 5px var(--secondary);
-    border: 10px groove var(--light);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 100px;
-    padding-left: 100px;
-  }
-  
   /* LAYOUT */
   .container {
     display: flex;
@@ -162,4 +118,3 @@
     align-content: flex-start;
     align-items: center;
   }
-  
