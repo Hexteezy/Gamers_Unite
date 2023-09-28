@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
-const steam = require('../public/js/steamAuth');
+const steam = require('../utils/steamAuth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
