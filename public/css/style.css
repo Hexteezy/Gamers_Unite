@@ -41,17 +41,17 @@
     flex-grow: 1;
   }
   
-  aside {
+  /* aside {
     flex-shrink: 0;
     background-color: var(--tertiary);
     padding: 80px;
     text-align: left;
     color: var(--light);
-  }
+  } */
   
   nav {
     display: flex;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     
   }
   
@@ -86,12 +86,13 @@
     margin: 0 0 20px 0;
     flex: 0 0 50%;
     max-width: 50%;
+    margin-left: 345px;
     padding: 5px;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
     border-style: double;
     border-width: thick;
-    background-color: #824a09;
+    background-color: var(--primary);
     color: var(--light);
   }
   
@@ -118,3 +119,9 @@
     align-content: flex-start;
     align-items: center;
   }
+
+  div.nav {
+    margin: auto;
+    background-color: var(--primary);
+  }
+
