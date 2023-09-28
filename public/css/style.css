@@ -41,13 +41,13 @@
     flex-grow: 1;
   }
   
-  aside {
+  /* aside {
     flex-shrink: 0;
     background-color: var(--tertiary);
     padding: 80px;
     text-align: left;
     color: var(--light);
-  }
+  } */
   
   nav {
     display: flex;
