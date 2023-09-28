@@ -5,7 +5,7 @@ const steamSess = new steam ({
     format: 'json'
 });
 
-steamSess.getNewsForApp({
+const steamNews = steamSess.getNewsForApp({
     appid: 440,
     count: 200,
     maxlength: 300,
@@ -19,5 +19,5 @@ steamSess.getNewsForApp({
     }
 });
 
-module.exports = steamSess;
+module.exports = steamNews;
 
