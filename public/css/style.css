@@ -52,6 +52,8 @@
   nav {
     display: flex;
     background-color: var(--primary);
+    /* margin: auto; */
+    float: left;
     
   }
   
@@ -86,6 +88,7 @@
     margin: 0 0 20px 0;
     flex: 0 0 50%;
     max-width: 50%;
+    margin-top: 15px;
     margin-left: 345px;
     padding: 5px;
     border: 3px solid var(--dark);
@@ -123,5 +126,11 @@
   div.nav {
     margin: auto;
     background-color: var(--primary);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: auto;
+    float: left;
   }
 
