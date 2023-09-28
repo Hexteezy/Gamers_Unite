@@ -5,17 +5,19 @@ const steamSess = new steam ({
     format: 'json'
 });
 
-steamSess.getNewsForApp({
+const steamNews = steamSess.getNewsForApp({
     appid: 440,
-    count: 3,
+    count: 200,
     maxlength: 300,
     callback: (err, data) => {
-        console.log(data);
+        let articles = [];
+        for (let i = 0; i <= 3; i++) {
+            let article = data.appnews.newsitems[Math.floor(Math.random() * 200)];
+            articles.push(article);
+        }
+        return articles;
     }
 });
 
-steamSess.getAppList({
-    callback: (err, data) => {
-        console.log(data);
-    }
-});
+module.exports = steamNews;
+
